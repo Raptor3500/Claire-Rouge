@@ -4,9 +4,12 @@ from discord.ext.commands import Bot
 import asyncio
 import os
 
+startup_extensions = [
+  'message'
+]
+
 bot = commands.Bot(command_prefix='claire ')
 ownerID = "274298631517896704"
-ownerID2 = "329337654850093056"
 
 # To remove the help command and make your own help command
 #bot.remove_command('help')
@@ -31,6 +34,14 @@ async def say(ctx, *args):
         await asyncio.sleep(1)
         await bot.say(mesg)
         print (ctx.message.author.id + " or " + ctx.message.author.name + " made me say '{}'".format(mesg))
+
+if __name__ == "__main__":
+    for extension in startup_extensions:
+        try:
+            bot.load_extension(extension)
+        except Exception as e:
+            exc = '{}: {}'.format(type(e).__name__, e)
+            print('Failed to load extension {}\n{}'.format(extension, exc))
          
   
 

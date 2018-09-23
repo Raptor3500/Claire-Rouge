@@ -30,11 +30,6 @@ async def say(ctx, *args):
         await asyncio.sleep(1)
         await bot.say(mesg)
         print (ctx.message.author.id + " or " + ctx.message.author.name + " made me say '{}'".format(mesg))
-        
-@bot.command(pass_context=True)
-async def on_message(self, message):
-  if 'pervert' in message.content:
-    await self.bot.send_message(message.channel, "I will burn him to cinders")
          
   
 

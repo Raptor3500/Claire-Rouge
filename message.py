@@ -17,8 +17,8 @@ class message():
         self.bot = bot
 
     async def on_message(self, message):
-        if 'I want to die' in message.content:
-            await self.bot.send_message(message.channel, 'Then kill yourself already.')
+        if 'pervert' in message.content:
+            await self.bot.send_message(message.channel, 'I`ll burn him to cinders')
 
 def setup(bot):
     bot.add_cog(message(bot))

@@ -33,7 +33,7 @@ async def say(ctx, *args):
         print (ctx.message.author.id + " or " + ctx.message.author.name + " made me say '{}'".format(mesg))
 
 startup_extensions = [
-  message
+  'message'
 ]
 
 if __name__ == "__main__":

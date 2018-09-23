@@ -4,7 +4,7 @@ from discord.ext.commands import Bot
 import asyncio
 import os
 
-bot = commands.Bot(command_prefix='yato ')
+bot = commands.Bot(command_prefix='claire ')
 ownerID = "274298631517896704"
 ownerID2 = "329337654850093056"
 

@@ -34,6 +34,12 @@ async def say(ctx, *args):
         await asyncio.sleep(1)
         await bot.say(mesg)
         print (ctx.message.author.id + " or " + ctx.message.author.name + " made me say '{}'".format(mesg))
+        
+@bot.command(pass_context=True)
+async def invite(ctx):
+  """Invite Me"""
+  await bot.say("here's my invite link")
+  await bot.say("https://discordapp.com/api/oauth2/authorize?client_id=493204973685964830&permissions=8&scope=bot")
 
 if __name__ == "__main__":
     for extension in startup_extensions:

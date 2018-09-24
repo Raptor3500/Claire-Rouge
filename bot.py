@@ -48,7 +48,7 @@ async def help(ctx):
   embed.set_author(name=ctx.message.author.name)
   embed.add_field(name='say', value='says your message', inline=False)
   
-  await bot.send_message(author, embed=embed) 
+  await bot.send_message(embed=embed) 
 
 if __name__ == "__main__":
     for extension in startup_extensions:

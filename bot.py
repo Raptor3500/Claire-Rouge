@@ -47,6 +47,8 @@ async def help(ctx):
   embed = discord.Embed(name='help', description=None, color=0x426ef4)
   embed.set_author(name=ctx.message.author.name)
   embed.add_field(name='say', value='says your message', inline=False)
+  
+  await bot.send_message(author, embed=embed) 
 
 if __name__ == "__main__":
     for extension in startup_extensions:

@@ -41,6 +41,12 @@ async def invite(ctx):
   """Invite Me"""
   await bot.say("here's my invite link")
   await bot.say("https://discordapp.com/api/oauth2/authorize?client_id=493204973685964830&permissions=8&scope=bot")
+  
+@bot.command(pass_context=True)
+async def help(ctx):
+  embed = discord.Embed(name='help', description=None, color=0x426ef4)
+  embed.set_author(name=ctx.message.author.name)
+  embed.add.field(name='say', value='says your message', inline=False)
 
 if __name__ == "__main__":
     for extension in startup_extensions:

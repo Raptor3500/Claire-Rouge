@@ -80,7 +80,7 @@ if __name__ == "__main__":
 @bot.command(pass_context=True)
 async def setgame(ctx):
   if ctx.message.author.id in ownerID:
-    await bot.change_status(game=discord.Game(name=(mesg))
+    await bot.change_presence(game=discord.Game(name= (mesg)))
 
          
   

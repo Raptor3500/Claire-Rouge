@@ -53,7 +53,7 @@ async def help(ctx):
   
 @bot.command(pass_context=True)
 async def owner(ctx):
-  if ctx.message.author,id in ownerID:
+  if ctx.message.author.id in ownerID:
   embed = discord.Embed(name='help', description=None, color=0x426ef4)
   embed.set_author(name=ctx.message.author.name)
   embed.add_field(name='owner', value='not finished', inline=False)

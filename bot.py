@@ -46,10 +46,22 @@ async def invite(ctx):
 async def help(ctx):
   embed = discord.Embed(name='help', description=None, color=0x426ef4)
   embed.set_author(name=ctx.message.author.name)
-  embed.add_field(name='Owner Only', value='not finished', inline=False)
+  embed.add_field(name='owner', value='not finished', inline=False)
   embed.add_field(name='cmds', value='List of commands (so far)', inline=False)
   
   await bot.say(embed=embed)
+  
+@bot.command(pass_context=True)
+async def owner(ctx):
+  if ctx.message.author,id in ownerID:
+  embed = discord.Embed(name='help', description=None, color=0x426ef4)
+  embed.set_author(name=ctx.message.author.name)
+  embed.add_field(name='owner', value='not finished', inline=False)
+  embed.add_field(name='cmds', value='List of commands (so far)', inline=False)
+  
+  await bot.say(embed=embed)
+  else:
+    await bot.say("You do not have access to these commands")
   
 @bot.command(pass_context=True)
 async def cmds(ctx):

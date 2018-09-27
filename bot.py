@@ -53,9 +53,9 @@ async def help(ctx):
   
 @bot.command(pass_context=True)
 async def owner(ctx):
-    embed = discord.Embed(name='owner', description=None, color=0x426ef4)
-    embed.set_author(name=ctx.message.author.name)
-    embed.add_field(name='setgame', value='not made', inline=False)
+  embed = discord.Embed(name='owner', description=None, color=0x426ef4)
+  embed.set_author(name=ctx.message.author.name)
+  embed.add_field(name='setgame', value='not made', inline=False)
   
   await bot.say(embed=embed)
   

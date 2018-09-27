@@ -52,7 +52,7 @@ async def help(ctx):
   await bot.say(embed=embed)
   
   @bot.command(pass_context=True)
-async def help(ctx):
+async def cmds(ctx):
   embed = discord.Embed(name='cmds', description=None, color=0x426ef4)
   embed.set_author(name=ctx.message.author.name)
   embed.add_field(name='say', value='says your message', inline=False)

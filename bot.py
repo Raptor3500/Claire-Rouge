@@ -76,6 +76,12 @@ if __name__ == "__main__":
         except Exception as e:
             exc = '{}: {}'.format(type(e).__name__, e)
             print('Failed to load extension {}\n{}'.format(extension, exc))
+            
+@bot.command(pass_context=True)
+async def setgame(ctx, *args)
+if ctx.message.author.id in ownerID:
+  await bot.change_status(game=discord.Game(name=' '))
+
          
   
 

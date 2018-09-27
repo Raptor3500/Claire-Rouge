@@ -51,7 +51,7 @@ async def help(ctx):
   
   await bot.say(embed=embed)
   
-  @bot.command(pass_context=True)
+@bot.command(pass_context=True)
 async def cmds(ctx):
   embed = discord.Embed(name='cmds', description=None, color=0x426ef4)
   embed.set_author(name=ctx.message.author.name)

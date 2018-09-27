@@ -78,7 +78,7 @@ if __name__ == "__main__":
             print('Failed to load extension {}\n{}'.format(extension, exc))
             
 @bot.command(pass_context=True)
-async def setgame(ctx):
+async def setgame(ctx, *args):
   if ctx.message.author.id in ownerID:
     mesg = ' '.join(args)
     await bot.change_presence(game=discord.Game(name= (mesg)))

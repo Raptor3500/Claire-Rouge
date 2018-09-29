@@ -78,11 +78,17 @@ if __name__ == "__main__":
             print('Failed to load extension {}\n{}'.format(extension, exc))
             
 @bot.command(pass_context=True)
-async def setgame(ctx, *args):
+async def playing(ctx, *args):
   if ctx.message.author.id in ownerID:
     mesg = ' '.join(args)
     await bot.change_presence(game=discord.Game(name= (mesg)))
-    await bot.say("I have changed my game to " + mesg)
+    await bot.say("I am now playing " + mesg)
+    
+@bot.command(pass_context=True)
+async def watching(ctx,args):
+  if ctx.message.author.id in ownerID:
+    mesg = ' '.join(args)
+    await bot.change_presence(game=discord.Game(name= mesg, type=3))
     
 @bot.command(pass_context=True)
 async def info(ctx, user: discord.Member):

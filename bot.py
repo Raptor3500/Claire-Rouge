@@ -82,7 +82,7 @@ async def setgame(ctx, *args):
   if ctx.message.author.id in ownerID:
     mesg = ' '.join(args)
     await bot.change_presence(game=discord.Game(name= (mesg)))
-    await bot.say("I have changed my game to" + game=discord.Game)
+    await bot.say("I have changed my game to" + mesg)
     
 @bot.command(pass_context=True)
 async def info(ctx, user: discord.Member):

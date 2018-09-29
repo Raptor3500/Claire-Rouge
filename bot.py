@@ -81,7 +81,7 @@ if __name__ == "__main__":
 async def setgame(ctx, *args):
   if ctx.message.author.id in ownerID:
     mesg = ' '.join(args)
-    if playing or Playing
+    if 'playing' or 'Playing'
     await bot.change_presence(game=discord.Game(name= (mesg)))
     
 @bot.command(pass_context=True)

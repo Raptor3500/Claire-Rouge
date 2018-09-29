@@ -91,6 +91,12 @@ async def watching(ctx, *args):
     await bot.change_presence(game=discord.Game(name= mesg, type=3))
     
 @bot.command(pass_context=True)
+async def listening(ctx, *args):
+  if ctx.message.author.id in ownerID:
+    mesg = ' '.join(args)
+    await bot.change_presence(game=discord.Game(name= mesg, type=2))
+    
+@bot.command(pass_context=True)
 async def info(ctx, user: discord.Member):
   
   embed = discord.Embed(title="{}'s info".format(user.name), description='Here is what I could find:', color=ctx.message.author.color)

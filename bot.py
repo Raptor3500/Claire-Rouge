@@ -83,11 +83,9 @@ async def setgame(ctx, *args):
     mesg = ' '.join(args)
     await bot.change_presence(game=discord.Game(name= (mesg)))
     
-@bot.commands(pass_context=True)
+@bot.command(pass_context=True)
 async def info(ctx, user: discord.Member):
-
-    # Then we start getting the actual data and run that smoothly into our embed, we use the code below as a simple framework
-    
+  
   embed = discord.Embed(title="{}'s info".format(user.name), description='Here is what I could find:', color=ctx.message.author.color)
   embed.add_field(name='Name', value='{}'.format(user.name))
   embed.add_field(name='ID', value='{}'.format(user.id), inline=True)
@@ -99,8 +97,6 @@ async def info(ctx, user: discord.Member):
   embed.add_field(name='Playing', value='{}'.format(user.game))
   embed.set_footer(text="{}'s Info".format(user.name), icon_url='{}'.format(user.avatar_url))
   embed.set_thumbnail(url=user.avatar_url)
-
-  # Then we finally send the embed to the chat after the command is issued!
   
   await bot.say(embed=embed)
 

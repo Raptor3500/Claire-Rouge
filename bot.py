@@ -55,7 +55,7 @@ async def help(ctx):
 async def owner(ctx):
   embed = discord.Embed(name='owner', description=None, color=0x426ef4)
   embed.set_author(name=ctx.message.author.name)
-  embed.add_field(name='setgame', value='not made', inline=False)
+  embed.add_field(name='setgame', value='Sets my game', inline=False)
   
   await bot.say(embed=embed)
   
@@ -81,8 +81,8 @@ if __name__ == "__main__":
 async def setgame(ctx, *args):
   if ctx.message.author.id in ownerID:
     mesg = ' '.join(args)
-    if 'playing' or 'Playing' in (mesg)
     await bot.change_presence(game=discord.Game(name= (mesg)))
+    await bot.say("I have changed my game to ' '")
     
 @bot.command(pass_context=True)
 async def info(ctx, user: discord.Member):

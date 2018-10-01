@@ -1,4 +1,9 @@
 import discord
+import requests
+import json
+
+user = 'rZuTJlFKDZF5oi0T'
+key = 'jiaN5JDdXrvjRNFng4t9rlMF47pjazst'
 
 class message():
     def __init__(self, bot):
@@ -7,6 +12,15 @@ class message():
     async def on_message(self, message):
         if 'pervert' in message.content:
             await self.bot.send_message(message.channel, "I'll burn him to cinders")
+            
+    async def on_message(self, message):
+        if not message.author.bot and (message.server == None or bot.user in message.mentions):
+            await bot.send_typing(message.channel)
+            txt = message.content.replace(message.server.me.mention,'') if message.server else message.content
+            r = json.loads(requests.post('https://cleverbot.io/1.0/ask', json={'user':user, 'key':key, 'nick':'frost', 'text':txt}).text)
+            if r['status'] == 'success':
+                await bot.send_message(message.channel, r['response'] )
+
 
 
 

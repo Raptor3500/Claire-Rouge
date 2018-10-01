@@ -18,7 +18,7 @@ class message():
             await self.bot.send_typing(message.channel)
             txt = message.content.replace(message.server.me.mention,'') if message.server else message.content
             r = json.loads(requests.post('https://cleverbot.io/1.0/ask', json={'user':user, 'key':key, 'nick':'claire', 'text':txt}).text)
-            await bot.send_message(message.channel, r['response'] )
+            await self.bot.send_message(message.channel, r['response'] )
 
 
 

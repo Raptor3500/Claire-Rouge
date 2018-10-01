@@ -1,8 +1,6 @@
 import discord
 from discord.ext import commands
 from discord.ext.commands import Bot
-import requests
-import json
 import asyncio
 import os
 
@@ -14,9 +12,6 @@ bot = commands.Bot(command_prefix='claire ')
 bot.remove_command('help')
 ownerID = "274298631517896704"
 
-user = 'rZuTJlFKDZF5oi0T'
-key = 'jiaN5JDdXrvjRNFng4t9rlMF47pjazst'
-
 # To remove the help command and make your own help command
 #bot.remove_command('help')
 
@@ -27,15 +22,6 @@ async def on_ready():
   print ("With the ID: " + bot.user.id)
   print ("Using discord.py v" + discord.__version__)
   print ("------")
-  
-@bot.event
-async def on_message(message):
-  if not message.author.bot and (message.server == None or bot.user in message.mentions):
-    await bot.send_typing(message.channel)
-    txt = message.content.replace(message.server.me.mention,'') if message.server else message.content
-    r = json.loads(requests.post('https://cleverbot.io/1.0/ask', json={'user':user, 'key':key, 'nick':'frost', 'text':txt}).text)
-    if r['status'] == 'success':
-      await bot.send_message(message.channel, r['response'] )
   
   # Make me say stuff
 @bot.command(pass_context=True)
@@ -132,5 +118,4 @@ async def info(ctx, user: discord.Member):
          
   
 
-requests.post('https://cleverbot.io/1.0/create', json={'user':user, 'key':key, 'nick':'claire'})
 bot.run(os.environ.get('Token'))

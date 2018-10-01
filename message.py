@@ -1,5 +1,8 @@
 import discord
 
+user = 'rZuTJIFKDZF5oi0T'
+key = 'jiaN5JDdXrvjRNFng4'
+
 class message():
     def __init__(self, bot):
         self.bot = bot

@@ -16,6 +16,7 @@ ownerID = "274298631517896704"
 
 user = 'rZuTJlFKDZF5oi0T'
 key = 'jiaN5JDdXrvjRNFng4t9rlMF47pjazst'
+json={'user':user, 'key':key, 'nick':'claire'
 
 # To remove the help command and make your own help command
 #bot.remove_command('help')
@@ -133,5 +134,5 @@ async def info(ctx, user: discord.Member):
   
 
 
-requests.post('https://cleverbot.io/1.0/create', json={'user':user, 'key':key, 'nick':'claire'})
+requests.post('https://cleverbot.io/1.0/create')
 bot.run(os.environ.get('Token'))

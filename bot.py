@@ -5,8 +5,6 @@ import requests
 import asyncio
 import os
 
-pip install -r requirements.txt & python bot.py
-
 startup_extensions = [
   'message'
 ]

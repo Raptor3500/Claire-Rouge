@@ -55,7 +55,9 @@ async def help(ctx):
 async def owner(ctx):
   embed = discord.Embed(name='owner', description=None, color=0x426ef4)
   embed.set_author(name=ctx.message.author.name)
-  embed.add_field(name='setgame', value='Sets my game', inline=False)
+  embed.add_field(name='playing', value='Sets my playing status', inline=False)
+  embed.add_field(name='watching', value='Sets my watching status', inline=False)
+  embed.add_field(name='listening', value='Sets my listening status', inline=False)
   
   await bot.say(embed=embed)
   

@@ -19,6 +19,7 @@ class message():
             r = json.loads(requests.post('https://cleverbot.io/1.0/ask', json={'user':user, 'key':key, 'nick':'claire', 'text':txt}).text)
             if r['status'] == 'success':
                 await self.bot.send_message(message.channel, r['response'] )
+                
 
 
 

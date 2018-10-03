@@ -121,11 +121,11 @@ async def info(ctx, user: discord.Member):
 async def rps(ctx, *args):
   mesg = ' '.join(args)
   messages = ["Rock, Paper, Scissors"]
-  if mesg == "rock"
+  if mesg == rock
   await bot.send_message(random.choice(messages))
-  elif mesg == "paper"
+  elif mesg == paper
   await bot.send_message(random.choice(messages))
-  elif mesg == "scissors"
+  elif mesg == scissors
   await bot.send_message(random.choice(messages))
   else:
     embed = discord.Embed(name='incorrect', description=None, color=error)
@@ -139,5 +139,5 @@ async def rps(ctx, *args):
 
          
   
-client.loop.create_task(background_loop())
+
 bot.run(os.environ.get('Token'))

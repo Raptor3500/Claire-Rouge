@@ -119,18 +119,18 @@ async def info(ctx, user: discord.Member):
   
 @bot.command
 async def rps(ctx, *args):
-mesg = ' '.join(args)
-if mesg = 'rock'
-messages = ["Rock, Paper, Scissors"]
-await bot.send_message(random.choice(messages))
-elif mesg = 'paper'
-await bot.send_message(random.choice(messages))
-elif mesg = 'scissors'
-await bot.send_message(random.choice(messages))
-else:
-  embed = discord.Embed(name='incorrect', description=None, color=error)
-  embed.set_author(name=ctx.message.author.name)
-  embed.add_field(name='Error', value='must be rock,paper, or scissors', inline=False)
+  mesg = ' '.join(args)
+  if mesg = 'rock'
+  messages = ["Rock, Paper, Scissors"]
+  await bot.send_message(random.choice(messages))
+  elif mesg = 'paper'
+  await bot.send_message(random.choice(messages))
+  elif mesg = 'scissors'
+  await bot.send_message(random.choice(messages))
+  else:
+    embed = discord.Embed(name='incorrect', description=None, color=error)
+    embed.set_author(name=ctx.message.author.name)
+    embed.add_field(name='Error', value='must be rock,paper, or scissors', inline=False)
 
 
 

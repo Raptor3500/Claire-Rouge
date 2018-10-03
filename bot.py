@@ -3,6 +3,7 @@ from discord.ext import commands
 from discord.ext.commands import Bot
 import asyncio
 import os
+import random
 
 startup_extensions = [
   'message'
@@ -11,6 +12,7 @@ startup_extensions = [
 bot = commands.Bot(command_prefix='claire ')
 bot.remove_command('help')
 ownerID = "274298631517896704"
+error = 0xFF0000
 
 # To remove the help command and make your own help command
 #bot.remove_command('help')
@@ -115,9 +117,27 @@ async def info(ctx, user: discord.Member):
   
   await bot.say(embed=embed)
   
+@bot.command
+async def rps(ctx, *args)
+mesg = ' '.join(args)
+if mesg = 'rock'
+messages = ["Rock, Paper, Scissors"]
+await bot.send_message(random.choice(messages))
+elif mesg = 'paper'
+await bot.send_message(random.choice(messages))
+elif mesg = 'scissors'
+await bot.send_message(random.choice(messages))
+else:
+  embed = discord.Embed(name='incorrect', description=None, color=error)
+  embed.set_author(name=ctx.message.author.name)
+  embed.add_field(name='Error', value='must be rock,paper, or scissors', inline=False)
+
+
+
+  
   
 
          
   
-
+client.loop.create_task(background_loop())
 bot.run(os.environ.get('Token'))

@@ -13,6 +13,7 @@ bot = commands.Bot(command_prefix='claire ')
 bot.remove_command('help')
 ownerID = "274298631517896704"
 error = 0xFF0000
+messages = ["Rock, Paper, Scissors"]
 
 # To remove the help command and make your own help command
 #bot.remove_command('help')
@@ -118,19 +119,14 @@ async def info(ctx, user: discord.Member):
   await bot.say(embed=embed)
   
 @bot.command
-async def rps(ctx, *args):
-  mesg = ' '.join(args)
-  messages = ["Rock, Paper, Scissors"]
-  if mesg == rock
+async def rps rock(ctx, *args):
   await bot.send_message(random.choice(messages))
-  elif mesg == paper
-  await bot.send_message(random.choice(messages))
-  elif mesg == scissors
-  await bot.send_message(random.choice(messages))
-  else:
-    embed = discord.Embed(name='incorrect', description=None, color=error)
-    embed.set_author(name=ctx.message.author.name)
-    embed.add_field(name='Error', value='must be rock,paper, or scissors', inline=False)
+  if random.choice == 'rock'
+  await bot.send_message("Its a Tie")
+  if random.choice == 'paper'
+    await bot.send_message("I WIN!!!")
+    else:
+      await bot.send_message("What?! How could I lose?!")
 
 
 

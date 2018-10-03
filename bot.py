@@ -121,7 +121,7 @@ async def info(ctx, user: discord.Member):
   @bot.command(pass_context=True)
   async def rate(ctx, *args):
     mesg = ' '.join(args)
-    if 'Xenzai' in mesg
+    if 'Xenzai' in mesg:
     await bot.say("Are you kidding me Xenzai is a freaking 10/10")
     else:
       await bot.say("I rate {} a" + random.randint(1, 10) + "/10"

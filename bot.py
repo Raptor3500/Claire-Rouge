@@ -120,12 +120,12 @@ async def info(ctx, user: discord.Member):
 @bot.command
 async def rps(ctx, *args):
   mesg = ' '.join(args)
-  if mesg = 'rock'
-  messages = ["Rock, Paper, Scissors"]
+  if mesg == 'rock'
+  messages == ["Rock, Paper, Scissors"]
   await bot.send_message(random.choice(messages))
-  elif mesg = 'paper'
+  elif mesg == 'paper'
   await bot.send_message(random.choice(messages))
-  elif mesg = 'scissors'
+  elif mesg == 'scissors'
   await bot.send_message(random.choice(messages))
   else:
     embed = discord.Embed(name='incorrect', description=None, color=error)

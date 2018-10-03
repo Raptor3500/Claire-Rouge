@@ -119,7 +119,7 @@ async def info(ctx, user: discord.Member):
   await bot.say(embed=embed)
   
 @bot.command
-async def rps rock(ctx, *args):
+async def rps_rock(ctx, *args):
   await bot.send_message(random.choice(messages))
   if random.choice == 'rock'
   await bot.send_message("Its a Tie")

@@ -118,7 +118,7 @@ async def info(ctx, user: discord.Member):
   await bot.say(embed=embed)
   
 @bot.command
-async def rps(ctx, *args)
+async def rps(ctx, *args):
 mesg = ' '.join(args)
 if mesg = 'rock'
 messages = ["Rock, Paper, Scissors"]

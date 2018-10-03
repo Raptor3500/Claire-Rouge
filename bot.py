@@ -122,7 +122,6 @@ async def rps(ctx, *args):
   mesg = ' '.join(args)
   messages = ["Rock, Paper, Scissors"]
   if mesg == "rock"
-  messages = ["Rock, Paper, Scissors"]
   await bot.send_message(random.choice(messages))
   elif mesg == "paper"
   await bot.send_message(random.choice(messages))

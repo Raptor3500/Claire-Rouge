@@ -120,12 +120,12 @@ async def info(ctx, user: discord.Member):
   
 @bot.command()
 async def rate(str : str):
-  str = str.strip()
-  number = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
-  if 'Xenzai' in str:
-      await bot.say("Are you kidding me, Xenzai is a freaking 10/10")
-  if 'Xenzai' not in str:
-      await bot.say("I rate {} a {}/10")fmt.format(str, (number))
+    str = str.strip()
+    number = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
+    if 'Xenzai' in str:
+        await bot.say('Are you kidding me, Xenzai is a freaking 10/10!')
+    if 'Xenzai' not in str:
+        await bot.say('I rate {} a {}/10'.format(str, random.choice(number)))
   
 
 

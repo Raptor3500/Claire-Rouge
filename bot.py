@@ -124,7 +124,7 @@ async def rate(ctx, *args):
   if 'Xenzai' in mesg:
     await bot.say("Are you kidding me Xenzai is a freaking 10/10")
     if 'Xenzai' not in mesg:
-      await bot.say("I rate {} a" + random.randint(1, 10) + "/10")
+      await bot.say("I rate {} a" + random.randint(1, 10) + "/10".format(mesg))
   
 
 

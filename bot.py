@@ -118,7 +118,7 @@ async def info(ctx, user: discord.Member):
   
   await bot.say(embed=embed)
   
-@bot.command(pass_context=True)
+@bot.command()
 async def rate(str : str):
   str = str.strip()
   number = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']

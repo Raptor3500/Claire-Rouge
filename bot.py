@@ -118,13 +118,13 @@ async def info(ctx, user: discord.Member):
   
   await bot.say(embed=embed)
   
-  @bot.command(pass_context=True)
-  async def rate(ctx, *args):
-    mesg = ' '.join(args)
-    if 'Xenzai' in mesg:
-      await bot.say("Are you kidding me Xenzai is a freaking 10/10")
-      if ctx.message.author.id not in ownerID:
-        await bot.say("I rate {} a" + random.randint(1, 10) + "/10")
+@bot.command(pass_context=True)
+async def rate(ctx, *args):
+mesg = ' '.join(args)
+if 'Xenzai' in mesg:
+  await bot.say("Are you kidding me Xenzai is a freaking 10/10")
+  if ctx.message.author.id not in ownerID:
+    await bot.say("I rate {} a" + random.randint(1, 10) + "/10")
   
 
 

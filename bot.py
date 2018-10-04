@@ -9,7 +9,7 @@ startup_extensions = [
   'message'
 ]
 
-bot = commands.Bot(command_prefix='claire ')
+bot = commands.Bot(command_prefix='Aito ')
 bot.remove_command('help')
 ownerID = "274298631517896704"
 error = 0xFF0000
@@ -137,4 +137,4 @@ async def rate(str : str):
          
   
 
-bot.run(os.environ.get('Token'))
+bot.run(os.environ.get('token'))

@@ -120,6 +120,7 @@ async def info(ctx, user: discord.Member):
   
 @bot.command(pass_context=True)
 async def rate(ctx, str : str):
+  str = str.strip()
   if 'Xenzai' in str:
     await bot.say("Are you kidding me Xenzai is a freaking 10/10")
     if 'Xenzai' not in str:

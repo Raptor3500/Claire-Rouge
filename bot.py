@@ -123,8 +123,8 @@ async def rate(ctx, str : str):
   str = str.strip()
   if 'Xenzai' in str:
     await bot.say("Are you kidding me Xenzai is a freaking 10/10")
-    if 'Xenzai' not in str:
-      await bot.say("I rate {} a" + random.randint(1, 10) + "/10".format(str))
+  if 'Xenzai' not in str:
+    await bot.say("I rate {} a" + random.randint(1, 10) + "/10".format(str, random.choice(number)))
   
 
 

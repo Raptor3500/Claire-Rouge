@@ -1,0 +1,26 @@
+{
+  "name": "Claire-Rouge",
+  "scripts": {
+  },
+  "env": {
+    "token": {
+      "required": true
+    },
+    "Token": {
+      "required": true
+    }
+  },
+  "formation": {
+    "worker": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
+}

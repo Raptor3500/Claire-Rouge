@@ -9,7 +9,7 @@ startup_extensions = [
   'message'
 ]
 
-bot = commands.Bot(command_prefix='Aito ')
+bot = commands.Bot(command_prefix='claire ')
 bot.remove_command('help')
 ownerID = "274298631517896704"
 error = 0xFF0000

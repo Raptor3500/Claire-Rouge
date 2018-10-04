@@ -137,4 +137,4 @@ async def rate(str : str):
          
   
 
-bot.run(os.environ.get('Token'))
+bot.run(os.environ.get('token'))

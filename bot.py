@@ -125,7 +125,7 @@ async def rate(str : str):
   if 'Xenzai' in str:
       await bot.say("Are you kidding me, Xenzai is a freaking 10/10")
   if 'Xenzai' not in str:
-      await bot.say("I rate {} a {}/10").format(str, (number))
+      await bot.say("I rate {} a {}/10")fmt.format(str, (number))
   
 
 
